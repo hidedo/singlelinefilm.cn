@@ -1,0 +1,47 @@
+nav.main-nav{
+    position: absolute;
+
+    left:5.4%;
+    height:10%;
+    width:30%;
+
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Avenir-Bold";
+    letter-spacing: 1px;
+    font-size: large;
+
+
+
+}
+
+.main-nav a:hover{
+    color: #595959;
+}
+
+
+
+
+
+nav.sub-nav{
+    position: absolute;
+    top:10%;
+    height: 5%;
+    width: 30%;
+    justify-content: space-around;
+    align-items: center;
+    right: 5.4%;
+    font-size: small;
+    transition:opacity 100ms linear;
+    display:flex;
+
+
+
+}
+.sub-nav span{
+    cursor: pointer;
+}
+.sub-nav span:hover{
+    color:#595959;
+}
+

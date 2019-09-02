@@ -1,0 +1,70 @@
+@import "./fontello/css/font.css";
+@import "./animate.css";
+@import "./font-awesome-4.7.0/css/font-awesome.min.css";
+
+* {
+  padding: 0;
+  margin: 0;
+
+}
+
+
+
+
+@font-face {
+  font-family: "Avenir";
+  src:url('fonts/AvenirNextLTPro-Regular.otf')
+}
+@font-face {
+  font-family: "Avenir-Bold";
+  src:url('fonts/AvenirNextLTPro-Bold.otf')
+}
+body {
+  font-family:"Avenir","Avenir-Bold",sans-serif,HelveticaNeue;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html,body{
+  height:100%;
+}
+
+#root,#root>div{
+  height:100%;
+  position: relative;
+  text-align: center;
+}
+
+li{
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+  color:black;
+}
+
+.active{
+  color:darkgray;
+}
+
+i{
+  cursor: pointer;
+}
+h1,h2,h3,h4,h5,h6{
+  font-weight: normal;
+}
+
+.loader{
+  fill: black;
+  height: 64px;
+  width: 64px;
+  display: inline-block;
+  margin-top: 20%;
+  z-index: 99;
+
+}
+
+.hide,.preload{
+  display:none;
+}

@@ -1,0 +1,70 @@
+.about-wrapper{
+    height: 85%;
+    width: 95%;
+    overflow: scroll;
+    position: relative;
+    top: 15%;
+    left: 3%;
+    box-shadow: 0px -5px 8px -5px hsl(0, 0%, 95%);
+
+}
+
+.text{
+    width: 75%;
+    height: 45%;
+    position: absolute;
+    left: 10%;
+    text-align: left;
+    top:5%;
+    overflow: scroll;
+
+
+}
+.about-wrapper h1{
+    font-family:"Avenir-Bold";
+    letter-spacing: 1px;
+}
+
+
+.logos{
+    display: flex;
+    flex-flow: row wrap;
+    font-size: small;
+    align-content: stretch;
+
+
+}
+
+.client{
+    width: 80%;
+
+    position: absolute;
+    left: 10%;
+
+    text-align: left;
+
+    top:50%;
+
+
+
+
+
+}
+
+.logos div{
+    display:flex;
+    align-items: center;
+    color:#3d3d3d;
+    margin:10px 20px;
+}
+.logos div>img{
+  margin-right:5px;
+}
+.word{
+    text-indent: 3%;
+    line-height: 2;
+    color: #3d3d3d;
+    font-size: small;
+
+
+}

@@ -1,0 +1,74 @@
+.work-container{
+    display: flex;
+    justify-content: flex-start;
+    flex-flow: row wrap;
+    align-items: stretch;
+    width: 100%;
+    height: 85%;
+    overflow: scroll;
+    background-color: black;
+    position: absolute;
+    top:15%;
+    box-shadow:0px -5px 8px -5px hsl(0, 0%, 95%)
+}
+
+
+.work-box {
+    width: 30%;
+    height: 40%;
+    text-align: center;
+    margin-left: 2.5%;
+    margin-top: 2%;
+    margin-bottom: 6%;
+    transition-property: width, height, opacity;
+    transition-duration: 0.3s;
+    transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+
+}
+
+.isVideo{
+    background-color:black;
+}
+
+
+.work-img-box{
+    transition: opacity 0.3s linear;
+    cursor: pointer;
+}
+
+.work-box-fade{
+    width:0px;
+    height:0px;
+    opacity:0;
+    margin-left:0;
+
+
+
+
+}
+.work-box div:nth-child(1){
+    height:100%;
+    width:100%;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.work-box div:nth-child(1)>img{
+    opacity:0;
+    transition:opacity 0.5s ease
+
+}
+.work-box div:nth-child(1)>img:hover{
+    opacity:1;
+
+}
+.work-box>span{
+    margin-top:2%;
+    display: inline-block;
+    font-size:small;
+    color: white;
+}
+
