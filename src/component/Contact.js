@@ -4,8 +4,8 @@ import '../css/Contact.css';
 
 
 class About extends Component {
-    componentWillMount() {
-        this.props.callParent({loading:false})
+    componentDidMount() {
+        this.props.callParent({loading:false,homeIn:false})
     }
 
     render() {

@@ -32,7 +32,9 @@ class Home extends Component {
 
     }
 
-
+componentWillMount() {
+    this.props.callParent({loading:true,homeIn:false});
+}
 
     slide(){
         const container = this.refs.container;
@@ -78,12 +80,7 @@ componentDidMount() {
 
 
 }
-    componentWillUnmount()
 
-    {
-        clearInterval(this.timer)
-
-    }
 
 
     handleLoad(value) {

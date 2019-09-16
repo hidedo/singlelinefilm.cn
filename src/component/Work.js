@@ -44,7 +44,7 @@ class Work extends Component{
                 console.log(this.arr, value)
             if (this.arr.length == this.preVideos) {
 
-                this.props.callParent({subNav:true,loading:false});
+                this.props.callParent({subNav:true,loading:false,homeIn:false});
 
 
                 console.info('all videos can play ')
@@ -81,11 +81,11 @@ onChildChange({workPlay,subNav}){
 
     componentWillUnmount()
      {
-        this.props.callParent({subNav:false})
+        this.props.callParent({subNav:false,loading:true,homeIn: false})
     }
     componentWillMount()
     {
-        this.props.callParent({loading:true})
+        this.props.callParent({loading:true,homeIn:false,subNav:false})
     }
     render() {
 

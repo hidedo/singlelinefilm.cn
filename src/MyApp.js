@@ -39,6 +39,7 @@ class MyApp extends Component{
             document.write('please use chrome or safari for PC ')
 
         }
+
         return (
         <HashRouter>
 
