@@ -6,7 +6,7 @@ import {NavLink} from 'react-router-dom';
 
 
 class Home extends Component {
-    picNumber =3;//images for slide
+    picNumber =4;//images for slide
     preImages=4;//images for loading
     n=1;//couter
     arr=[];//container of loaded images
@@ -40,7 +40,7 @@ componentWillMount() {
         const container = this.refs.container;
 
 
-        if (this.n == 3) {
+        if (this.n == this.picNumber) {
             // const e = document.createEvent('MouseEvents');
             // e.initMouseEvent('mousedown1', true, true)
             // document.querySelector(".right").dispatchEvent(e)
@@ -112,7 +112,7 @@ componentDidMount() {
         clearInterval(this.timer)
 
 
-        if(this.n==3){
+        if(this.n==this.picNumber){
             this.refs.container.classList.remove('move')
             this.refs.container.style.left=0 //reposition to the first pic
 
@@ -174,6 +174,7 @@ componentDidMount() {
 
         this.refs[`myVideo${this.n}`].play();
 
+        
 
     }
 
@@ -184,7 +185,7 @@ componentDidMount() {
             isPlay: !this.state.isPlay,
         });
 
-        this.refs.myVideo1.pause();
+        this.refs[`myVideo${this.n}`].pause();
 
 
     }
@@ -233,10 +234,10 @@ componentDidMount() {
 
             <div>
                 <div ref='preload' className={'preload'}>
-                    <img onLoad={this.handleLoad.bind(this, 0)} src="/image/2.jpg" alt=""/>
-                    <img onLoad={this.handleLoad.bind(this, 1)} src="/image/3.jpg" alt=""/>
-                    <img onLoad={this.handleLoad.bind(this, 2)} src="/image/4.jpg" alt=""/>
-                    <img onLoad={this.handleLoad.bind(this, 3)} src="/image/5.jpg" alt=""/>
+                    <img onLoad={this.handleLoad.bind(this, 0)} src="/image/60s_Princess_Cruises_Music_Only_Moment.jpg" alt=""/>
+                    <img onLoad={this.handleLoad.bind(this, 1)} src="/image/MG_Moment.jpg" alt=""/>
+                    <img onLoad={this.handleLoad.bind(this, 2)} src="/image/Skoda_IntoTheSun_60s_B_Generic_Moment.jpg" alt=""/>
+                    <img onLoad={this.handleLoad.bind(this, 3)} src="/image/BOU_ZDY_15sec_FINAL.png" alt=""/>
                 </div>
                 <div ref={'menu'}
 
@@ -261,7 +262,7 @@ componentDidMount() {
 
                     </ul>
                     <footer className={'footer'}>
-                        <small><a href="mailto:info@meridian.LA">©2019 MERIDIAN CONTENT, LLC</a></small>
+                        <small>© 2019 singlelinefilm.cn, all rights reserved</small>
                     </footer>
 
 
@@ -287,9 +288,11 @@ componentDidMount() {
                      onMouseUp={this.mouseUpRight.bind(this)}>
                     <i className={'icon-right-open-big'}></i>
                 </div>
-                {/*<div className={'logo'}>*/}
-                {/*        logo*/}
-                {/*</div>*/}
+                <div className={'logo'}
+                     style={{'backgroundImage':this.state.isMenuOpen?'url(/image/logo/black.png)':'url(/image/logo/white.png)',
+                     'opacity':this.state.isPlay?0.3:1}}>
+
+                </div>
 
                 <div className={'close fadeIn animated'} style={{'display': !this.state.isPlay ? 'none' : 'block'}}
                      onClick={this.close.bind(this)}
@@ -320,67 +323,90 @@ componentDidMount() {
                 >
 
 
-                    <div className={`img-box`} style={{'backgroundImage': 'url(/image/3.jpg)'}}>
+                    <div className={`img-box`} style={{'backgroundImage': 'url(/image/60s_Princess_Cruises_Music_Only_Moment.jpg)'}}>
                    <span className={'intro'} style={{'opacity': this.state.mouseEnter ? 0 : 1}}>
-                       <h1>Directed By: alacata</h1>
-                         <h2>when you see me, I see you</h2>
+                       <h2></h2>
+                       <h1>PRINCESS Cruises</h1>
+                       <h5>Direct By:</h5>
                     </span>
 
 
                         <video ref={'myVideo0'}
                                className={`video animated  ${this.state.isPlay ? 'fadeIn' : 'fadeOut'}`}
 
-                               width={'80%'} controls="controls"
-                               src="/video/2.mp4">
+                               height={'90%'} controls="controls"
+                               src="/video/60s_Princess_Cruises_Music_Only.mp4">
 
                         </video>
                     </div>
-                    <div className={`img-box`} style={{'backgroundImage': 'url(/image/1.jpg)'}}>
+                    <div className={`img-box`} style={{'backgroundImage': 'url(/image/MG_Moment.jpg)'}}>
                     <span className={'intro'} style={{'opacity': this.state.mouseEnter ? 0 : 1}}>
-                         <h1>Directed By: Marco Presti</h1>
+                        <h2>MG</h2>
+                        <h1>Take In</h1>
+                        <h5>Direct By:</h5>
 
-                    <h2>Asahi “Enter Asahi”</h2>
+
+
                     </span>
 
 
                         <video ref={'myVideo1'}
                                className={`video animated  ${this.state.isPlay ? 'fadeIn' : 'fadeOut'}`}
 
-                               width={'80%'}  controls="controls"
-                               src="/video/1.mp4">
+                               height={'90%'}  controls="controls"
+                               src="/video/MG.mp4">
 
                         </video>
 
 
                     </div>
-                    <div className={`img-box`} style={{'backgroundImage': 'url(/image/2.jpg)'}}>
+                    <div className={`img-box`} style={{'backgroundImage': 'url(/image/Skoda_IntoTheSun_60s_B_Generic_Moment.jpg)'}}>
                     <span className={'intro'} style={{'opacity': this.state.mouseEnter ? 0 : 1}}>
-                        <h1>Directed By: TOMASSO</h1>
-                         <h2>LI HUI fantastic</h2>
+                        <h2>SKODA</h2>
+                        <h1>Into The Sun</h1>
+                        <h5>Direct By:</h5>
                     </span>
 
 
                         <video ref={'myVideo2'}
                                className={`video animated  ${this.state.isPlay ? 'fadeIn' : 'fadeOut'}`}
 
-                               width={'80%'}  controls="controls"
-                               src="/video/2.mp4">
+                               height={'90%'}  controls="controls"
+                               src="/video/Skoda_IntoTheSun_60s_B_Generic.mp4">
 
                         </video>
 
                     </div>
-                    <div className={`img-box`} style={{'backgroundImage': 'url(/image/3.jpg)'}}>
+                    <div className={`img-box`} style={{'backgroundImage': 'url(/image/BOU_ZDY_15sec_FINAL.png)'}}>
                    <span className={'intro'} style={{'opacity': this.state.mouseEnter ? 0 : 1}}>
-                        <h1>Directed By: alacata</h1>
-                         <h2>when you see me, I see you</h2>
+                        <h2>BOUCHERON</h2>
+                        <h1>Deliver Love</h1>
+                        <h5>Direct By: Janine Cheng</h5>
                     </span>
 
 
                         <video ref={'myVideo3'}
                                className={`video animated  ${this.state.isPlay ? 'fadeIn' : 'fadeOut'}`}
 
-                               width={'80%'}  controls="controls"
-                               src="/video/1.mp4">
+                               height={'90%'}  controls="controls"
+                               src="/video/BOU_ZDY_15sec_FINAL.mp4">
+
+                        </video>
+                    </div>
+
+                    <div className={`img-box`} style={{'backgroundImage': 'url(/image/60s_Princess_Cruises_Music_Only_Moment.jpg)'}}>
+                   <span className={'intro'} style={{'opacity': this.state.mouseEnter ? 0 : 1}}>
+                       <h2></h2>
+                       <h1>PRINCESS Cruises</h1>
+                       <h5>Direct By:</h5>
+                    </span>
+
+
+                        <video ref={'myVideo4'}
+                               className={`video animated  ${this.state.isPlay ? 'fadeIn' : 'fadeOut'}`}
+
+                               height={'90%'}  controls="controls"
+                               src="/video/60s_Princess_Cruises_Music_Only.mp4">
 
                         </video>
                     </div>

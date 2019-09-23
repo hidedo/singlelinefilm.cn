@@ -45,3 +45,12 @@ nav.sub-nav{
     color:#595959;
 }
 
+header .logo{
+    width: 8%;
+    height: 8%;
+    position: absolute;
+    top: 2%;
+    right: 5.4%;
+    background-image: url(/image/logo/black.png);
+    background-size: 100% 100%;
+}

@@ -21,7 +21,7 @@ class NavMenu extends Component{
     }
     render() {
         return(
-            <div>
+            <header>
                 <nav className={'main-nav'} style={{'display':this.props.homeIn?'none':'flex'}}>
                 <NavLink to ={'/'} exact={true}><h5>HOME</h5></NavLink>
                 <NavLink to ={'/work'}
@@ -38,10 +38,13 @@ class NavMenu extends Component{
                 >
                     <span onClick={this.setCategory.bind(this,'All')} style={{'color':this.state.group=='All'?'darkgrey':''}}>All</span>
                     <span onClick={this.setCategory.bind(this,'Brand')}  style={{'color':this.state.group=='Brand'?'darkgrey':''}}>Brand</span>
-                    <span onClick={this.setCategory.bind(this,'TV')}  style={{'color':this.state.group=='TV'?'darkgrey':''}}>TV</span>
-                    <span onClick={this.setCategory.bind(this,'Other')} style={{'color':this.state.group=='Other'?'darkgrey':''}}>Other</span>
+                    <span onClick={this.setCategory.bind(this,'Story')}  style={{'color':this.state.group=='Story'?'darkgrey':''}}>Story</span>
+                    <span onClick={this.setCategory.bind(this,'TV')} style={{'color':this.state.group=='TV'?'darkgrey':''}}>TV</span>
                 </nav>
-            </div>
+                <div className={'logo'} style={{'display':this.props.homeIn?'none':'block'}}>
+
+                </div>
+            </header>
 
         )
 

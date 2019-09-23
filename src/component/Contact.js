@@ -16,20 +16,18 @@ class About extends Component {
                     <br/>
                     <br/>
                     <p className={'address'}>
-                        590 Tahoe Keys Blvd
+                        上海市安福路211号
+
                         <br/>
-                        South Lake Tahoe, CA 96150
+
+                        <strong>T:</strong> 021-54652723
                         <br/>
-                        United States
+                        <strong>E:</strong> <a href="mailto:Janinecheng.sh@gmail.com">Janinecheng.sh@gmail.com</a>
                         <br/>
                         <br/>
 
-                        Mon – Sun, 7a – 10p
-                        <br/>
+                        <small>© 2019 singlelinefilm.cn, all rights reserved</small>
 
-                        <strong>T:</strong> +1 530 555 1234
-                        <br/>
-                        <strong>E:</strong> <a href="mailto:info@meridian.LA">placeholder@example.com</a>
 
                     </p>
 
@@ -39,7 +37,7 @@ class About extends Component {
                 <div className={'contact-map'}>
                     <iframe
                         src="map.html"
-                        width="100%" height="100%" frameBorder="0" style={{"border":0, "allowFullScreen":""}}>
+                        width="100%" height="100%" frameBorder="0" style={{"border":0, "allowFullScreen":"true"}}>
 
                     </iframe>
                 </div>

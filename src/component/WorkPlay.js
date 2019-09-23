@@ -49,11 +49,7 @@ class Work extends Component{
 
         return(
             <div className={'play-container'}>
-                <div className={'play-bar'}>
-                    <i className={'fa fa-step-backward'} onClick={this.playPrevious.bind(this)}></i>
-                    <i className={'fa fa-eject'} onClick={this.close.bind(this)}></i>
-                    <i className={'fa fa-step-forward'} onClick={this.playNext.bind(this)} ></i>
-                </div>
+
                 <div ref={'playContent'} className={`play-content slideInLeft animated`}>
                     <video  width={'100%'} controls="controls" preload={'auto'}
                            src={`/video/${this.props.source[this.state.index]}`}></video>
@@ -68,6 +64,11 @@ class Work extends Component{
                         <br/>
                         Other: {other}
                     </span>
+                    <div className={'play-bar'}>
+                        <i className={'fa fa-step-backward'} onClick={this.playPrevious.bind(this)}></i>
+                        <i className={'fa fa-eject'} onClick={this.close.bind(this)}></i>
+                        <i className={'fa fa-step-forward'} onClick={this.playNext.bind(this)} ></i>
+                    </div>
 
                 </div>
             </div>

@@ -6,7 +6,7 @@
     top:15%;
     z-index: 1;
 
-    background-color: black;
+    background:black;
 
 }
 
@@ -18,16 +18,12 @@
     left: 2%;
     top: 2%;
 
-    border-top-left-radius: 5px;
 
-    border-bottom-left-radius: 5px;
 
 }
 
 
-.play-content video{
-    border-radius: 5px;
-}
+
 
 .play-des{
     position: absolute;
@@ -36,10 +32,10 @@
     right: 0;
 
     top: 2%;
-    text-align: left;
-    background-color: white;
+    text-align: center;
+
     border-top-left-radius: 5px;
-    color:#3d3d3d;
+    color:white;
     border-bottom-left-radius: 5px;
 
 
@@ -53,19 +49,22 @@
     font-size: small;
     line-height: 2;
     top:5%;
+    text-align: left;
 
 
 
 }
 .play-bar{
     height: 10%;
-    width: 15%;
-    font-size: 25px;
-    right: 6%;
-    bottom:10%;
-    position:absolute;
-    z-index: 1;
-    display:flex;
+    width: 50%;
+    font-size: 20px;
+
+    position: relative;
+
     justify-content: space-around;
     align-items: center;
+    color: white;
+    display: inline-flex;
+
+    top: 85%;
 }
