@@ -8,6 +8,7 @@ class About extends Component{
 
     componentDidMount() {
         this.props.callParent({loading:false,homeIn:false})
+        document.getElementsByTagName('title')[0].text='Singleline Film | About'
     }
 
     render() {

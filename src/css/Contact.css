@@ -48,3 +48,6 @@
 strong{
     color:black;
 }
+.address a:hover{
+    color:black;
+}

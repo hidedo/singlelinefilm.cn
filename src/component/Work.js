@@ -165,7 +165,7 @@ class Work extends Component{
 
         const videoElement = this.refs.preload.querySelectorAll('video')[value];
 
-        videoElement.addEventListener('canplay',()=>{
+        videoElement.addEventListener('canplaythrough',()=>{
                 this.arr.push(true);
                 console.log(this.arr, value)
             if (this.arr.length == this.preVideos) {
@@ -212,7 +212,12 @@ onChildChange({workPlay,subNav}){
     componentWillMount()
     {
         this.props.callParent({loading:true,homeIn:false,subNav:false})
+
     }
+    componentDidMount() {
+        document.getElementsByTagName('title')[0].text='Singleline Film | Work'
+    }
+
     render() {
 
         return(

@@ -6,6 +6,7 @@ import '../css/Contact.css';
 class About extends Component {
     componentDidMount() {
         this.props.callParent({loading:false,homeIn:false})
+        document.getElementsByTagName('title')[0].text='Singleline Film | Contact'
     }
 
     render() {
@@ -16,7 +17,9 @@ class About extends Component {
                     <br/>
                     <br/>
                     <p className={'address'}>
-                        上海市安福路211号
+                        阡度文化科技（上海）有限公司
+                        <br/>
+                        <strong>A:</strong>上海市安福路211号
 
                         <br/>
 
@@ -27,6 +30,8 @@ class About extends Component {
                         <br/>
 
                         <small>© 2019 singlelinefilm.cn, all rights reserved</small>
+                        <br/>
+                        <small><a href="mailto:anatanohyde@outlook.com">Powered By Tommy Huang</a></small>
 
 
                     </p>

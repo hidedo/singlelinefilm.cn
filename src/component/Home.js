@@ -66,6 +66,7 @@ componentDidMount() {
         window.onresize = ()=>{
             this.setState(
                 {innerWidth:window.innerWidth})
+
         }
         this.refs.container.onmousewheel=(e)=>{
             e.stopPropagation();
@@ -75,7 +76,7 @@ componentDidMount() {
             e.stopPropagation();
             e.preventDefault();
     }
-
+document.getElementsByTagName('title')[0].text='Singleline Film | Home'
 
 
 
@@ -294,17 +295,7 @@ componentDidMount() {
 
                 </div>
 
-                <div className={'close fadeIn animated'} style={{'display': !this.state.isPlay ? 'none' : 'block'}}
-                     onClick={this.close.bind(this)}
-                     onMouseEnter={this.mouseEnter2.bind(this)}
-                     onMouseLeave={this.mouseLeave2.bind(this)}>
-                    <span className={'menu-span span3'}
-                          style={{'backgroundColor':this.state.navHover?'darkgray':''}}
-                         ></span>
-                    <span className={'menu-span span4'}
-                          style={{'backgroundColor':this.state.navHover?'darkgray':''}}
-                          ></span>
-                </div>
+
                 <div className={'nav-button fadeIn animated'} style={{'display': !this.state.isPlay ? 'block' : 'none'}}
                      onClick={this.clickMenu.bind(this)}
                      onMouseEnter={this.mouseEnter2.bind(this)}
@@ -321,6 +312,17 @@ componentDidMount() {
                 <div ref={'container'} className={'container fadeIn animated'}
                      style={{'left': `${-this.state.innerWidth}px`}}
                 >
+                    <div  className={'close fadeIn animated'} style={{'display': !this.state.isPlay ? 'none' : 'block'}}
+                          onClick={this.close.bind(this)}
+                          onMouseEnter={this.mouseEnter2.bind(this)}
+                          onMouseLeave={this.mouseLeave2.bind(this)}>
+                    <span className={'menu-span span3'}
+                          style={{'backgroundColor':this.state.navHover?'darkgray':''}}
+                    ></span>
+                        <span className={'menu-span span4'}
+                              style={{'backgroundColor':this.state.navHover?'darkgray':''}}
+                        ></span>
+                    </div>
 
 
                     <div className={`img-box`} style={{'backgroundImage': 'url(/image/60s_Princess_Cruises_Music_Only_Moment.jpg)'}}>
@@ -334,7 +336,7 @@ componentDidMount() {
                         <video ref={'myVideo0'}
                                className={`video animated  ${this.state.isPlay ? 'fadeIn' : 'fadeOut'}`}
 
-                               height={'90%'} controls="controls"
+                               height={'90%'} controls="controls" controlsList={'nofullscreen nodownload'}
                                src="/video/60s_Princess_Cruises_Music_Only.mp4">
 
                         </video>
@@ -353,7 +355,7 @@ componentDidMount() {
                         <video ref={'myVideo1'}
                                className={`video animated  ${this.state.isPlay ? 'fadeIn' : 'fadeOut'}`}
 
-                               height={'90%'}  controls="controls"
+                               height={'90%'}  controls="controls" controlsList={'nofullscreen nodownload'}
                                src="/video/MG.mp4">
 
                         </video>
@@ -371,7 +373,7 @@ componentDidMount() {
                         <video ref={'myVideo2'}
                                className={`video animated  ${this.state.isPlay ? 'fadeIn' : 'fadeOut'}`}
 
-                               height={'90%'}  controls="controls"
+                               height={'90%'}  controls="controls" controlsList={'nofullscreen nodownload'}
                                src="/video/Skoda_IntoTheSun_60s_B_Generic.mp4">
 
                         </video>
@@ -388,7 +390,7 @@ componentDidMount() {
                         <video ref={'myVideo3'}
                                className={`video animated  ${this.state.isPlay ? 'fadeIn' : 'fadeOut'}`}
 
-                               height={'90%'}  controls="controls"
+                               height={'90%'}  controls="controls" controlsList={'nofullscreen nodownload'}
                                src="/video/BOU_ZDY_15sec_FINAL.mp4">
 
                         </video>
@@ -405,7 +407,7 @@ componentDidMount() {
                         <video ref={'myVideo4'}
                                className={`video animated  ${this.state.isPlay ? 'fadeIn' : 'fadeOut'}`}
 
-                               height={'90%'}  controls="controls"
+                               height={'90%'}  controls="controls" controlsList={'nofullscreen nodownload'}
                                src="/video/60s_Princess_Cruises_Music_Only.mp4">
 
                         </video>

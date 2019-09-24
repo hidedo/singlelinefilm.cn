@@ -51,7 +51,8 @@ class Work extends Component{
             <div className={'play-container'}>
 
                 <div ref={'playContent'} className={`play-content slideInLeft animated`}>
-                    <video  width={'100%'} controls="controls" preload={'auto'}
+                    <video  width={'100%'} controls="controls" controlsList={'nodownload'}
+                            preload={'auto'}
                            src={`/video/${this.props.source[this.state.index]}`}></video>
                 </div >
                 <div ref={'playDes'} className={`play-des slideInRight  animated`}>
