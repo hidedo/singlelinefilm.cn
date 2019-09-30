@@ -33,7 +33,7 @@
 .logos{
     display: flex;
     flex-flow: row wrap;
-    font-size: small;
+    font-size: 0.82rem;
     align-content: stretch;
 
 
@@ -68,7 +68,6 @@
     text-indent: 3%;
     line-height: 2;
     color: #3d3d3d;
-    font-size: small;
-
+    font-size: 0.82rem;
 
 }

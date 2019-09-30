@@ -15,7 +15,15 @@ class MyApp extends Component{
         loading:true,//switch
         homeIn:false,
     }
+componentDidMount() {
+        const docEl = document.documentElement;
+        const recalc = ()=>{
+            docEl.style.fontSize = 16 * (docEl.clientWidth / 1366)+'px'
+        }
 
+        document.addEventListener('DOMContentLoaded', recalc, false);
+        window.addEventListener('resize', recalc, false);
+}
 
     onChildChange(value){
         this.setState({category:value})
