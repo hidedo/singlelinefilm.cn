@@ -13,10 +13,12 @@
 
 @font-face {
   font-family: "Avenir";
+  font-display:block;
   src:url('fonts/AvenirNextLTPro-Regular.otf')
 }
 @font-face {
   font-family: "Avenir-Bold";
+  font-display:block;
   src:url('fonts/AvenirNextLTPro-Bold.otf')
 }
 body {

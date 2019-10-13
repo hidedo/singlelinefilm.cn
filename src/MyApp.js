@@ -20,7 +20,6 @@ componentDidMount() {
         const recalc = ()=>{
             docEl.style.fontSize = 16 * (docEl.clientWidth / 1366)+'px'
         }
-
         document.addEventListener('DOMContentLoaded', recalc, false);
         window.addEventListener('resize', recalc, false);
 }
@@ -37,7 +36,7 @@ componentDidMount() {
 
 
     render(){
-        if(navigator.userAgent.indexOf('Mobile')!==-1){
+        if(navigator.userAgent.indexOf('Mobile')!==-1||navigator.userAgent.indexOf('Edge')!==-1){
             document.write('please use chrome or safari for PC')
 
         }

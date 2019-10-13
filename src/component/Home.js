@@ -10,6 +10,7 @@ class Home extends Component {
     preImages=4;//images for loading
     n=1;//couter
     arr=[];//container of loaded images
+    timer=null;
 
 
     state = {
@@ -263,7 +264,7 @@ document.getElementsByTagName('title')[0].text='Singleline Film | Home'
 
                     </ul>
                     <footer className={'footer'}>
-                        <small>© 2019 singlelinefilm.cn, all rights reserved</small>
+                        <small>© 2019 singlelinefilm.cn, all content copyright</small>
                     </footer>
 
 

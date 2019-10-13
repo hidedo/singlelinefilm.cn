@@ -27,11 +27,10 @@ class About extends Component {
                         <br/>
                         <strong>E:</strong> <a href="mailto:Janinecheng.sh@gmail.com">Janinecheng.sh@gmail.com</a>
                         <br/>
-                        <br/>
 
-                        <small>© 2019 singlelinefilm.cn, all rights reserved</small>
-                        <br/>
-                        <small><a href="mailto:anatanohyde@outlook.com">Powered By Tommy Huang</a></small>
+
+
+                        <small><a href="mailto:anatanohyde@outlook.com">Powered by Tommy Huang</a></small>
 
 
                     </p>

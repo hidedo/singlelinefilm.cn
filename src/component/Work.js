@@ -163,27 +163,34 @@ class Work extends Component{
 
     handleLoad(value) {
 
-        const videoElement = this.refs.preload.querySelectorAll('video')[value];
-
-        videoElement.addEventListener('canplaythrough',()=>{
-                this.arr.push(true);
-                console.log(this.arr, value)
+                this.arr.push(`${value}success`);
+                console.log(this.arr)
             if (this.arr.length == this.preVideos) {
 
                 this.props.callParent({subNav:true,loading:false,homeIn:false});
 
 
-                console.info('all videos can play ')
 
-            } else if (this.arr.length !== this.preVideos && this.arr.length !== 0) {
-                console.info('some videos failed')
             }
-                },false)
+
 
 
 
 
     }
+    handleError(value) {
+        this.arr.push(`${value}fail`);
+        console.log(this.arr);
+        if (this.arr.length == this.preVideos) {
+
+            this.props.callParent({subNav: true, loading: false, homeIn: false});
+
+
+
+        }
+    }
+
+
 
 onChildChange({workPlay,subNav}){
         this.setState({workPlay:workPlay});
@@ -215,7 +222,7 @@ onChildChange({workPlay,subNav}){
 
     }
     componentDidMount() {
-        document.getElementsByTagName('title')[0].text='Singleline Film | Work'
+        document.getElementsByTagName('title')[0].text='Singleline Film | Work';
     }
 
     render() {
@@ -223,8 +230,8 @@ onChildChange({workPlay,subNav}){
         return(
             <div>
                 <div ref='preload' className={'preload'}>
-                    <video onLoadStart={this.handleLoad.bind(this, 0)} src="/video/BOU_ZDY_15sec_FINAL.mp4" />
-                    <video onLoadStart={this.handleLoad.bind(this, 1)} src="/video/BOU_LYJ_15sec_V8_Final.mp4" />
+                    <video onCanPlayThrough={this.handleLoad.bind(this,0)} onError={this.handleError.bind(this,0)} src="/video/BOU_ZDY_15sec_FINAL.mp4" />
+                    <video onCanPlayThrough={this.handleLoad.bind(this,1)} onError={this.handleError.bind(this,1)} src="/video/BOU_LYJ_15sec_V8_Final.mp4" />
 
                 </div>
                 {this.state.workPlay?<WorkPlay index={this.state.index} callParent={this.onChildChange.bind(this)}
@@ -239,7 +246,7 @@ onChildChange({workPlay,subNav}){
                          onMouseLeave={this.mouseLeave.bind(this)}>
                         <LazyLoad><div className={'work-img-box'} style={{'backgroundImage':"url('/image/MG_Moment.jpg')",'opacity':`${this.state.hover==0 || this.state.hover==null?1:0.2}`}}>
 
-                            <img  src="/image/icon-play.svg" alt=""/>
+                            <img src="/image/icon-play.svg" alt=""/>
 
                         </div></LazyLoad>
 
@@ -262,7 +269,7 @@ onChildChange({workPlay,subNav}){
                         <LazyLoad>
 
                             <div className={'work-img-box isVideo'} style={{'opacity':`${this.state.hover==2|| this.state.hover==null?1:0.2}`}}>
-                                <video width='100%' autoPlay="autoplay" muted={true} loop="loop" src="/video/BOU_ZDY_15sec_FINAL.mp4"></video>
+                                <video width='100%' autoPlay={true} muted={true} loop="loop" src="/video/BOU_ZDY_15sec_FINAL.mp4"></video>
                                   
 
                         </div></LazyLoad>
@@ -273,7 +280,7 @@ onChildChange({workPlay,subNav}){
                          onMouseLeave={this.mouseLeave.bind(this)}>
 
                         <LazyLoad><div className={'work-img-box'} style={{'backgroundImage':"url('/image/60s_Princess_Cruises_Music_Only_Moment.jpg')",'opacity':`${this.state.hover==3 || this.state.hover==null?1:0.2}`}}>
-                            <img  src="/image/icon-play.svg" alt=""/>
+                            <img src="/image/icon-play.svg" alt=""/>
 
                         </div></LazyLoad>
                         <span>Princess Cruises</span>
@@ -283,7 +290,7 @@ onChildChange({workPlay,subNav}){
                          onMouseLeave={this.mouseLeave.bind(this)}>
                         <LazyLoad><div className={'work-img-box isVideo'} style={{'opacity':`${this.state.hover==4|| this.state.hover==null?1:0.2}`}}>
 
-                            <video  width='100%' autoPlay="autoplay" loop="loop" muted={true} src="/video/BOU_LYJ_15sec_V8_Final.mp4"></video>
+                            <video  width='100%' autoPlay={true} loop="loop" muted={true} src="/video/BOU_LYJ_15sec_V8_Final.mp4"></video>
 
                         </div></LazyLoad>
                         <span>Boucheron: Deliver Love</span>
